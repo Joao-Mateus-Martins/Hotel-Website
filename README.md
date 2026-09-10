@@ -1,60 +1,107 @@
-# 🏨 Vista Mar Hotel — Sistema de Reservas
+🏨 Vista Mar Hotel — Booking Website
 
-Crie uma apresentação profissional para um projeto de **site completo de hotel e sistema de reservas**, desenvolvido com foco em uma experiência moderna, responsiva e intuitiva.
+A modern and responsive hotel website with a complete suite search and reservation flow.
 
-O projeto **Vista Mar Hotel** possui uma interface elegante para apresentação do hotel, busca de suítes e processo de reserva, conectando o front-end a um back-end em PHP e banco de dados MySQL.
+The project combines a polished frontend with a PHP/MySQL backend to simulate a real hotel booking experience.
 
-## ✨ Funcionalidades
+🌐 Live Demo
 
-* 🏨 Página inicial com apresentação do hotel
-* 🔎 Motor de busca de suítes
-* 📅 Busca por data de check-in e check-out
-* 👥 Seleção da quantidade de hóspedes
-* 🛏️ Listagem dinâmica de suítes disponíveis
-* 🖼️ Fotos e informações das suítes
-* 🛎️ Visualização detalhada das acomodações
-* 📋 Sistema de reservas
-* 🚫 Validação de disponibilidade para evitar reservas conflitantes
-* 💬 Formulário de contato
-* 📧 Newsletter
-* 📱 Layout totalmente responsivo
-* 🎨 Interface moderna e elegante
+View Live Demo
 
-## 🛠️ Tecnologias utilizadas
+The booking system requires a PHP server and MySQL database to run locally.
 
-### Front-end
+✨ Features
 
-* HTML5
-* CSS3
-* Bootstrap 5
-* JavaScript
-* Fetch API / AJAX
-* Bootstrap Icons
+🔎 Search suites by check-in and check-out dates
 
-### Back-end
+👥 Search by number of guests
 
-* PHP
-* PDO
-* MySQL
+🏨 Dynamic suite availability
 
-## ⚙️ Funcionamento
+🖼️ Suite images and amenities
 
-O usuário informa as datas de entrada e saída e a quantidade de hóspedes. O JavaScript envia esses dados para o back-end utilizando `fetch/AJAX`.
+💰 Automatic total price calculation
 
-O PHP consulta o banco de dados MySQL e verifica:
+📋 Suite details modal
 
-* capacidade da suíte;
-* disponibilidade no período selecionado;
-* possíveis reservas conflitantes.
+📅 Reservation form
 
-Após a consulta, os resultados são apresentados dinamicamente na interface.
+🔒 Availability validation before booking
 
-O usuário também pode acessar os detalhes de uma suíte e realizar uma reserva. Antes de salvar a reserva, o sistema realiza uma nova validação de disponibilidade para evitar **overbooking**.
+📱 Responsive design
 
-## 📂 Estrutura do projeto
+📨 Contact form
 
-```text
+📧 Newsletter section
+
+🧭 Responsive navigation
+
+🧠 How It Works
+
+The booking flow follows this process:
+
+Search → Availability → Suite Details → Reservation
+
+The user selects check-in, check-out, and number of guests.
+
+JavaScript sends the search request to the PHP backend.
+
+PHP queries MySQL and checks room capacity and conflicting reservations.
+
+Available suites are returned as JSON and displayed dynamically.
+
+The user can open the suite details and submit a reservation.
+
+The backend validates availability again before saving the reservation.
+
+This validation helps prevent double bookings.
+
+🛠️ Technologies
+
+Frontend
+
+HTML5
+
+CSS3
+
+JavaScript
+
+Bootstrap 5
+
+Bootstrap Icons
+
+Google Fonts
+
+Fetch API / AJAX
+
+Backend
+
+PHP
+
+PDO
+
+Database
+
+MySQL
+
+📱 Responsive Design
+
+The interface was designed to provide a consistent experience across:
+
+💻 Desktop
+
+💻 Laptop
+
+📱 Mobile
+
+📲 Tablet
+
+The layout adapts navigation, search forms, suite cards, modals, and content sections for smaller screens.
+
+📂 Project Structure
+
 hotel-site/
+│
 ├── index.html
 ├── css/
 │   └── style.css
@@ -68,49 +115,112 @@ hotel-site/
 ├── sql/
 │   └── database.sql
 └── README.md
-```
 
-## 💻 Como executar
+🚀 Getting Started
 
-O projeto pode ser executado localmente utilizando **XAMPP, WAMP ou MAMP**.
+Requirements
 
-1. Clone este repositório.
-2. Coloque a pasta do projeto dentro do `htdocs`.
-3. Inicie o Apache e o MySQL.
-4. Abra o phpMyAdmin.
-5. Importe o arquivo `sql/database.sql`.
-6. Configure as credenciais do banco em `php/config.php`.
-7. Acesse:
+XAMPP, WAMP, MAMP, or another PHP server
 
-```text
+PHP
+
+MySQL
+
+Web browser
+
+1. Clone the repository
+
+git clone YOUR_REPOSITORY_URL
+
+2. Configure the database
+
+Open phpMyAdmin and import:
+
+sql/database.sql
+
+This creates the database, tables, and sample data.
+
+3. Configure the connection
+
+Open:
+
+php/config.php
+
+Set your MySQL credentials:
+
+DB_HOST
+DB_NAME
+DB_USER
+DB_PASS
+
+4. Start the project
+
+Place the project inside your server directory.
+
+For XAMPP:
+
+htdocs/hotel-site
+
+Then start Apache and MySQL.
+
+Open:
+
 http://localhost/hotel-site/
-```
 
-Também é possível utilizar o servidor embutido do PHP:
+🎯 Project Goals
 
-```bash
-php -S localhost:8000
-```
+This project was created to practice building a more complete web application instead of a static landing page.
 
-## 🎯 Objetivo do projeto
+The main focus was:
 
-Este projeto foi desenvolvido para praticar e demonstrar conhecimentos em **desenvolvimento web Full Stack**, integração entre front-end e back-end, consumo de endpoints, manipulação de banco de dados e desenvolvimento de sistemas com funcionalidades reais.
+Frontend and backend integration
 
-## 🚀 Próximas melhorias
+Database communication
 
-* Painel administrativo
-* Gerenciamento de suítes
-* Gerenciamento de reservas
-* Sistema de login para hóspedes
-* Integração com gateway de pagamento
-* Envio automático de e-mail de confirmação
-* Dashboard administrativo
-* Melhorias de segurança e autenticação
+API-style PHP endpoints
 
----
+Dynamic content rendering
 
-### 👨‍💻 Desenvolvido por João Mateus
+Reservation logic
 
-Projeto desenvolvido como parte da minha evolução no desenvolvimento **Full Stack**, buscando aplicar na prática conceitos de HTML, CSS, JavaScript, PHP e MySQL.
+Date availability validation
 
-⭐ Se você gostou do projeto, considere deixar uma estrela no repositório!
+Responsive UI development
+
+🔮 Future Improvements
+
+💳 Online payment integration
+
+📧 Automatic reservation confirmation emails
+
+👤 Customer authentication
+
+⚙️ Admin dashboard
+
+🏨 Suite management
+
+📊 Reservation management
+
+🔐 Improved authentication and security
+
+👨‍💻 Developer
+
+Developed by João Mateus
+
+Junior Front-End Developer
+
+Focused on building modern, responsive, and user-friendly web applications.
+
+🤝 Open to
+
+Freelance projects
+
+Website development
+
+Front-End opportunities
+
+Collaborations
+
+New web projects
+
+⭐ If you like this project, consider giving the repository a star.
