@@ -1,4 +1,4 @@
-🏨 Vista Mar Hotel — Booking Website
+🏨 Vista Mar Hotel — Booking Website 
 
 A modern and responsive hotel website with a complete suite search and reservation flow.
 
